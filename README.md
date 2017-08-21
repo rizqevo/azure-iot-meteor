@@ -2,5 +2,5 @@
 Example nodejs web app for Azure IoT
 
 Stack :
-- Meteor : 
-	- Angular Meteor 1.x
+1. Meteor :
+	A. Angular Meteor 1.x
