@@ -17,7 +17,6 @@ var printError = function (err) {
 
 var printMessage = function () {
   console.log('Message default: ');
-  //console.log(JSON.stringify(message.body));
   console.log(messages)
   console.log('');
 };
@@ -28,12 +27,7 @@ _.each(messages, function(message) {
 printMessage();
 
 var addMessages = function(message){
-  //_msg = JSON.stringify(message.body);
-//console.log('_msg : ',_msg);
-  //_.each(messages, function(message) {
     self.added('messages', Random.id(), message.body);
-  //});
-  //console.log('messages : ',messages);
 }
 
 var client = EventHubClient.fromConnectionString(connectionString);
@@ -49,10 +43,6 @@ client.open()
   });
 })
 .catch(printError);
-
-
-
-  //return messages;
 
 	return self.ready();
 

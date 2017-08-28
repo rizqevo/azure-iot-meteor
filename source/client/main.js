@@ -22,8 +22,6 @@ angular.module('iothubexample', [
       return messages.find({}, { sort: { messageId: -1 } });
     }
   });
-// , { sort: { messageId: -1 } }
-  //console.log(vm.messageData);
 
 
   $scope.nvd3Chart = {};
@@ -35,7 +33,6 @@ angular.module('iothubexample', [
 
     if (vm._messages)
     {
-      //$scope.nvd3Chart.api.updateWithData(vm._messages);
       $scope.data =
         [{
            "key": "temperature",
@@ -57,11 +54,7 @@ angular.module('iothubexample', [
 
 
 
-  vm._messages =
-  // [
-    //{"messageId":-1,"deviceId":"Raspberry Pi Web Client Fake 1","temperature":24.31399233104477,"humidity":70.89398279765187},
-    {"messageId":0,"deviceId":"Raspberry Pi Web Client Fake 1","temperature":26.31399233104477,"humidity":71.89398279765187};
-  //];
+  vm._messages = {"messageId":0,"deviceId":"Raspberry Pi Web Client Fake 1","temperature":26.31399233104477,"humidity":71.89398279765187};
 
   $scope.options = {
       chart: {
@@ -85,33 +78,7 @@ angular.module('iothubexample', [
             return d3.format(',.2f')(d);
           }
         }
-         ,
-        // visible: true, // default: true
-        // extended: false, // default: false
-        // disabled: false, // default: false
-        // refreshDataOnly: true//, // default: true
-        // deepWatchOptions: true, // default: true
-        // deepWatchData: true, // default: true
-        // deepWatchDataDepth: 1, // default: 2
-        // debounce: 10 // default: 10
       }
     };
-
-
-
-  // $scope.data =
-  //   [{
-  //      "key": "temperature",
-  //      "color": "#d62728",
-  //      "values": [{
-  //        "value": vm._messages.temperature
-  //      }]
-  //   }, {
-  //      "key": "humidity",
-  //      "color": "#1f77b4",
-  //      "values": [{
-  //        "value": vm._messages.humidity
-  //      }]
-  //   }];
 
 }])
