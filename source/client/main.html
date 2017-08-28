@@ -1,9 +1,26 @@
-<div ng-controller="mainCtrl">
+<div ng-controller="mainCtrl as vm">
 
-<h1>{{title}}</h1>
-<p>
-  Data from IoT Hub
-</p>
+<h1>{{vm.title}}</h1>
+
+<h2>
+  Message From IT Hub : {{vm._messages.messageId}}
+</h2>
+
+<!-- <p>
+  {{vm._messages}}
+</p> -->
+
+<textarea rows="8" cols="80">
+  {{vm.messageData|json}}
+</textarea>
+
+<!-- <p>
+  Haha : {{vm.messageData|json}}
+</p> -->
+
+<h2>Device : {{vm._messages.deviceId}}</h2>
+
+  <nvd3 options="options" data="data" api="nvd3Chart.api"></nvd3>
 
 
 </div>

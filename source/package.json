@@ -1,0 +1,15 @@
+{
+  "name": "source",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-meteor": "^1.3.12",
+    "angular-nvd3": "^1.0.9",
+    "azure-event-hubs": "0.0.8",
+    "babel-runtime": "^6.26.0",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
